@@ -18,7 +18,7 @@ use crate::MenuSnapshotHandle;
     target_os = "macos",
     all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -59,7 +59,7 @@ impl Drop for Menu {
                 target_os = "macos",
                 all(
                     any(
-                        target_os = "linux",
+                        target_os = "linux", target_os = "android",
                         target_os = "dragonfly",
                         target_os = "freebsd",
                         target_os = "netbsd",
@@ -295,7 +295,7 @@ impl Menu {
     /// Panics if the gtk event loop hasn't been initialized on the thread.
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -393,7 +393,7 @@ impl Menu {
     /// Removes this menu from a [`gtk::Window`]
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -425,7 +425,7 @@ impl Menu {
     /// Hides this menu from a [`gtk::Window`]
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -453,7 +453,7 @@ impl Menu {
     /// Shows this menu on a [`gtk::Window`]
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -481,7 +481,7 @@ impl Menu {
     /// Returns whether this menu visible on a [`gtk::Window`]
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -498,7 +498,7 @@ impl Menu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -518,7 +518,7 @@ impl Menu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -583,7 +583,7 @@ impl ContextMenu for Menu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -604,7 +604,7 @@ impl ContextMenu for Menu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -620,7 +620,7 @@ impl ContextMenu for Menu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",

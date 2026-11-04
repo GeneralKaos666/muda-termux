@@ -63,7 +63,7 @@ pub trait ContextMenu: sealed::Sealed {
     /// Returns `false` if menu tracking was cancelled for any reason.
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -82,7 +82,7 @@ pub trait ContextMenu: sealed::Sealed {
     /// The returned [`gtk::Menu`] is valid as long as the `ContextMenu` is.
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -98,7 +98,7 @@ pub trait ContextMenu: sealed::Sealed {
     /// The returned [`gtk::PopoverMenu`] is valid as long as the `ContextMenu` is.
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",

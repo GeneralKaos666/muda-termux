@@ -14,7 +14,7 @@ use muda::{
 #[cfg(target_os = "macos")]
 use tao::platform::macos::WindowExtMacOS;
 #[cfg(any(
-    target_os = "linux",
+    target_os = "linux", target_os = "android",
     target_os = "dragonfly",
     target_os = "freebsd",
     target_os = "netbsd",
@@ -29,7 +29,7 @@ use tao::{
     window::{Window, WindowBuilder},
 };
 #[cfg(any(
-    target_os = "linux",
+    target_os = "linux", target_os = "android",
     target_os = "dragonfly",
     target_os = "freebsd",
     target_os = "netbsd",
@@ -191,7 +191,7 @@ fn main() -> wry::Result<()> {
     #[cfg(all(
         feature = "gtk3",
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -287,7 +287,7 @@ fn main() -> wry::Result<()> {
                 #[cfg(all(
                     feature = "gtk3",
                     any(
-                        target_os = "linux",
+                        target_os = "linux", target_os = "android",
                         target_os = "dragonfly",
                         target_os = "freebsd",
                         target_os = "netbsd",
@@ -309,7 +309,7 @@ fn main() -> wry::Result<()> {
 
     fn build_webview(builder: WebViewBuilder, window: &Window) -> wry::Result<WebView> {
         #[cfg(not(any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -317,7 +317,7 @@ fn main() -> wry::Result<()> {
         )))]
         return builder.build(window);
         #[cfg(any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -370,7 +370,7 @@ fn show_context_menu(window: &Window, menu: &dyn ContextMenu, position: Option<P
     #[cfg(all(
         feature = "gtk3",
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",

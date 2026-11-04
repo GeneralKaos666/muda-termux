@@ -18,7 +18,7 @@ pub enum Error {
         windows,
         all(
             any(
-                target_os = "linux",
+                target_os = "linux", target_os = "android",
                 target_os = "dragonfly",
                 target_os = "freebsd",
                 target_os = "netbsd",
@@ -33,7 +33,7 @@ pub enum Error {
         windows,
         all(
             any(
-                target_os = "linux",
+                target_os = "linux", target_os = "android",
                 target_os = "dragonfly",
                 target_os = "freebsd",
                 target_os = "netbsd",
@@ -48,7 +48,7 @@ pub enum Error {
     AcceleratorParseError(#[from] AcceleratorParseError),
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -60,7 +60,7 @@ pub enum Error {
     GtkWindowWithoutApplication,
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",

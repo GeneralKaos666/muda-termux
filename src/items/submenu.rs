@@ -21,7 +21,7 @@ use crate::MenuSnapshotHandle;
     target_os = "macos",
     all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -68,7 +68,7 @@ impl Drop for Submenu {
                 target_os = "macos",
                 all(
                     any(
-                        target_os = "linux",
+                        target_os = "linux", target_os = "android",
                         target_os = "dragonfly",
                         target_os = "freebsd",
                         target_os = "netbsd",
@@ -450,7 +450,7 @@ impl ContextMenu for Submenu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -471,7 +471,7 @@ impl ContextMenu for Submenu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
@@ -487,7 +487,7 @@ impl ContextMenu for Submenu {
 
     #[cfg(all(
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",

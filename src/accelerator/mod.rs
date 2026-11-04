@@ -40,7 +40,7 @@ use std::{borrow::Borrow, hash::Hash, str::FromStr};
 
 #[cfg(all(
     any(
-        target_os = "linux",
+        target_os = "linux", target_os = "android",
         target_os = "dragonfly",
         target_os = "freebsd",
         target_os = "netbsd",
@@ -52,7 +52,7 @@ use std::{borrow::Borrow, hash::Hash, str::FromStr};
 pub(crate) mod gtk;
 #[cfg(all(
     any(
-        target_os = "linux",
+        target_os = "linux", target_os = "android",
         target_os = "dragonfly",
         target_os = "freebsd",
         target_os = "netbsd",

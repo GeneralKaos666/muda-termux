@@ -14,7 +14,7 @@ use tao::platform::macos::WindowExtMacOS;
 #[cfg(all(
     feature = "gtk3",
     any(
-        target_os = "linux",
+        target_os = "linux", target_os = "android",
         target_os = "dragonfly",
         target_os = "freebsd",
         target_os = "netbsd",
@@ -235,7 +235,7 @@ fn show_context_menu(window: &Window, menu: &dyn ContextMenu, position: Option<P
     #[cfg(all(
         feature = "gtk3",
         any(
-            target_os = "linux",
+            target_os = "linux", target_os = "android",
             target_os = "dragonfly",
             target_os = "freebsd",
             target_os = "netbsd",
